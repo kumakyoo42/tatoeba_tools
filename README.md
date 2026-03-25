@@ -47,3 +47,15 @@ php check_sentences.php definition-file in-file good-file bad-file
 For a definition of the syntax of the definition file see the notes in
 the provided [definition file for greek sentences](/greek_checks.txt).
 
+## `to_html.php`
+
+Converts a file with sentences to an HTML list with links to the
+sentences in Tatoeba. The output is written to stdout.
+
+Can deal with `sentences.csv` as well as with `sentences_detailed.csv`.
+
+Usage:
+
+```
+php to_html.php filename
+```
