@@ -1,0 +1,47 @@
+Lines starting with a hash symbol (#) separate the parts of this
+definition file. Everything before the first part is ignored.
+
+The first part defines valid symbols of a sentence and the second and
+the third part define valid symbols for the first and the last
+character of a sentence. They may contain ranges a-b. If a minus sign
+is needed it has to be the first or the last character of a line.
+Whitespace characters must not be the first or the last character of a
+line.
+
+The fourth part contains some regular expressions that a sentence must
+not match. This can be used to exclude sentences where the space after
+a comma is missing and such stuff. The regular expressions must be
+some, that PHP understands and it must include the separators as well
+as the modifieres. If you are not familiar with regular expressions,
+leave this part empty.
+
+The fifth and the sixth part contain comma separated lists of ids of
+sentences. For sentences with these ids the rules in part one to four
+are ignored. This is useful if you deal with the same set over and
+over again and do not want to pick out the exceptions of the rules
+manually.
+
+# Symbols used in greek sentences
+α-ωςάέήίόύώϊΐϋΑ-ΩΆΈΉΊΌΎΏ
+- .!;:,·—–%"«»΄’´'0-9
+
+# Symbols used as first character in greek sentences
+Α-ΩΆΈΉΊΌΎΏ
+"'«
+
+# Symbols used as last character in greek sentences
+.;!"'”“»:…)
+
+# Regular expressions that must not match
+/\s[.!;:,·]/u
+/\bό, τι\b/u
+/,[α-συ-ωςάέήίόύώϊΐϋΑ-ΩΆΈΉΊΌΎΏ]/u
+/,τ[^ι]/u
+/σ[ .!;:,·]/u
+/^[^«]*»/u
+/«[^»]*$/u
+/\b[α-ωςΑ-Ω]{5,}\b/
+
+# Comma separated list of good sentences (overwriting the rules above)
+
+# Comma separated list of bad sentences (overwriting the rules above)

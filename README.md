@@ -30,3 +30,20 @@ Usage:
 php extract_sentences.php [-l lang] [-u user] inputfile
 ```
 
+## `check_sentences.php`
+
+Performs some checks on each sentence. Depending on the outcome of
+this check each sentence is written to a file containing good sentences
+or bad sentences.
+
+Can deal with `sentences.csv` as well as with `sentences_detailed.csv`.
+
+Usage:
+
+```
+php check_sentences.php definition-file in-file good-file bad-file
+```
+
+For a definition of the syntax of the definition file see the notes in
+the provided [definition file for greek sentences](/greek_checks.txt).
+
