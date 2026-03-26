@@ -59,3 +59,26 @@ Usage:
 ```
 php to_html.php filename
 ```
+
+## `count_words.php`
+
+Count the frequency of words (or characters if `-c` is given) of all
+sentences of a file. If `-l` is given, the sentences are converted to
+lower case before being processed.
+
+A set of symbols is used for separating the words. The program
+contains a default set, which works good for greek sentences and maybe
+good for some other (european) languages. I didn't test this. If you
+need a different set, you can define it on the command line with the
+`-s` switch followed by a parameter containing all characters of the
+set. Please note: The space character is always added to this list. In
+case of `-c` the characters in this set are not counted.
+
+The output is a TSV file (sentence - count) sorted by word count. It
+is written to stdout.
+
+Usage:
+
+```
+php count_words.php [-c] [-l] [-s separation_symbols ] inputfile
+```
