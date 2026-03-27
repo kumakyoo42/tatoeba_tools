@@ -16,8 +16,14 @@ while (true)
     $line = fgets($res);
     if ($line===false) break;
 
+    $space = $line[0]==' ';
+
     $h = explode("\t",trim($line));
-    echo '<li><a href="https://tatoeba.org/de/sentences/show/'.$h[0].'">'.$h[0].' '.$h[2].'</a>'.PHP_EOL;
+    if ($space)
+      echo '<br>&nbsp;&nbsp;';
+    else
+      echo '<li>';
+    echo '<a href="https://tatoeba.org/de/sentences/show/'.$h[0].'">'.$h[0].' '.$h[2].'</a>'.PHP_EOL;
 }
 echo '</ol>'.PHP_EOL;
 
