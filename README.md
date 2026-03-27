@@ -104,3 +104,15 @@ Usage:
 ```
 php rate_sentences.php [-c] [-l] [-s separation_symbols ] wordfile inputfile
 ```
+
+## `ord.php`
+
+Displays the unicode codepoint (hexadecimal and decimal) for every
+character in the sentence.
+
+Usage:
+
+```
+php ord.php sentence
+```
+
