@@ -82,3 +82,25 @@ Usage:
 ```
 php count_words.php [-c] [-l] [-s separation_symbols ] inputfile
 ```
+
+## `rate_sentences.php`
+
+Sortes the sentences according to "difficulty". For determining the
+difficulty of a sentence a frequency list of words is needed. Words
+are put into frequency categorys according to this list. For comparing
+two sentences, the least frequent words are compared. If they are in
+the same category, the second least frequent words are compared and so
+on.
+
+Parameters should be the same used to generate the word list with
+`count_words.php`. It's also possible to use the word lists from
+[AITStudy](https://aitstudy.com/temp/wordcounts/), but in this case
+you will have to find the correct parameters yourself.
+
+The output is written to stdout.
+
+Usage:
+
+```
+php rate_sentences.php [-c] [-l] [-s separation_symbols ] wordfile inputfile
+```
